@@ -1,5 +1,6 @@
 import React from 'react'
 import Votes from '../components/Votes'
+import { pollData } from '../Data/PollVotes'
 
 const Servey = () => {
     return (
@@ -12,12 +13,9 @@ const Servey = () => {
 
                     <div className="max-w-7xl w-full p-5 mx-auto grid grid-cols-3 gap-5">
 
-                        <Votes />
-                        <Votes />
-                        <Votes />
-                        <Votes />
-                        <Votes />
-                        <Votes />
+                        {pollData.map((poll, index) => (
+                            <Votes key={index} poll={poll} />
+                        ))}
 
                     </div>
 
