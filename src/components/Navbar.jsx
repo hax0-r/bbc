@@ -7,7 +7,7 @@ const TopNavbar = () => {
 
     const [toggleNavbar, setToggleNavbar] = useState(false)
     const location = useLocation();
-    
+
 
     return (
         <>
@@ -44,7 +44,12 @@ const TopNavbar = () => {
                         <div className="border-b md:block hidden fastFadeIn">
                             <div className="md:px-10 px-5 py-1.5  mx-auto max-w-7xl w-full">
                                 <ul className='flex items-center justify-center gap-5 font-medium'>
-                                    <li> <NavLink className={"navUnderLine"} to={"/"}> Home</NavLink></li>
+
+                                    {
+                                        location.pathname !== "/servey" && (
+                                            <li> <NavLink className={"navUnderLine"} to={"/"}> Home</NavLink></li>
+                                        )
+                                    }
                                     <li> <NavLink className={"navUnderLine"} to={"/news"}> News</NavLink></li>
                                     <li> <NavLink className={"navUnderLine"} to={"/sport"}> Sport</NavLink></li>
                                     <li> <NavLink className={"navUnderLine"} to={"/business"}> Business</NavLink></li>
