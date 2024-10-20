@@ -1,6 +1,6 @@
 export const pollData = [
     {
-        question: 'What is your favorite programming language?',
+        question: 'What is your favorite language?',
         options: [
             { id: 'option1', text: 'JavaScript', votes: 8 },
             { id: 'option2', text: 'Python', votes: 5 },
@@ -8,7 +8,7 @@ export const pollData = [
         ],
     },
     {
-        question: 'Which front-end framework do you prefer?',
+        question: 'Which framework do you prefer?',
         options: [
             { id: 'option1', text: 'React', votes: 10 },
             { id: 'option2', text: 'Vue', votes: 3 },

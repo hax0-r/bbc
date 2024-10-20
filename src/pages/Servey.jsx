@@ -11,7 +11,7 @@ const Servey = () => {
 
                 <div className="max-w-7xl mx-auto w-full p-5">
 
-                    <div className="max-w-7xl w-full p-5 mx-auto grid grid-cols-3 gap-5">
+                    <div className="max-w-7xl w-full mx-auto grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
 
                         {pollData.map((poll, index) => (
                             <Votes key={index} poll={poll} />

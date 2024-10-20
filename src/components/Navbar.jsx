@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { HiMiniBars3 } from 'react-icons/hi2'
 import { IoIosSearch } from 'react-icons/io'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const TopNavbar = () => {
 
     const [toggleNavbar, setToggleNavbar] = useState(false)
+    const location = useLocation();
+    
 
     return (
         <>
@@ -33,8 +35,8 @@ const TopNavbar = () => {
 
                 <div className=" flex justify-center items-center mb-4">
                     <div className="border rounded-full flex justify-center overflow-hidden  items-center">
-                        <Link to={"/"} onClick={() => setToggleNavbar(false)} className=' py-3 block px-5 pl-7 transition-all duration-500 font-medium hover:bg-zinc-50'>Home</Link>
-                        <Link to={"/servey"} onClick={() => setToggleNavbar(false)} className=' py-3 block px-5 pr-7 transition-all duration-500 font-medium hover:bg-zinc-50'>Survey</Link>
+                        <Link to={"/"} onClick={() => setToggleNavbar(false)} className={`py-3 block px-5 pl-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${location.pathname === "/" && "bg-zinc-50"} `}>Home</Link>
+                        <Link to={"/servey"} onClick={() => setToggleNavbar(false)} className={`py-3 block px-5 pr-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${location.pathname === "/servey" && "bg-zinc-50"}`}>Survey</Link>
                     </div>
                 </div>
                 {
