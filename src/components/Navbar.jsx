@@ -24,7 +24,7 @@ const TopNavbar = () => {
 
                     </div>
                     <Link to={"/"}>
-                        <img src="/public/Images/Home/logo.png" className='max-w-[97px] w-full' alt="" />
+                        <img src="../../public/Images/Home/logo.png" className='max-w-[97px] w-full' alt="" />
                     </Link>
                     <div className="md:flex hidden items-center max-w-[14rem] w-full gap-3">
                         <Link to={"login"}>
