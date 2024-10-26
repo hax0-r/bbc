@@ -20,7 +20,7 @@ const TopNavbar = () => {
 
                     <div className="flex items-center md:max-w-[16rem] md:w-full gap-5 md:flex-row flex-row-reverse">
                         <HiMiniBars3 className='text-2xl cursor-pointer' onClick={() => setResponsiveNavbar(!responsiveNavbar)} />
-                        <div className="w-full bg-zinc-50 p-2.5 rounded-full flex items-center">
+                        <div className="w-full bg-zinc-50 p-2.5 rounded-full md:flex hidden items-center">
                             <IoIosSearch className='text-xl cursor-pointer' />
                             <input type="text" placeholder='Search...' name="" className='w-full bg-transparent pl-3 placeholder:text-sm text-sm' id="" />
                         </div>
