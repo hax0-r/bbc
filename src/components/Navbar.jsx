@@ -72,12 +72,12 @@ const TopNavbar = () => {
             <div className={`fixed top-0 transition-all duration-500 left-0 ${responsiveNavbar ? "md:w-[23rem] w-full" : "w-[0rem]"}  overflow-hidden bg-white h-screen z-50`}>
                 <IoClose className='absolute top-5 right-5 text-3xl text-zinc-800 cursor-pointer transition-all hover:rotate-90 hover:scale-110 duration-500' onClick={() => setResponsiveNavbar(!responsiveNavbar)} />
                 <ul className='flex flex-col gap-1 font-medium px-7 pt-16'>
-                    <li> <Link className={`block ${location.pathname === "/" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/"}> Home</Link></li>
-                    <li> <Link className={`block ${location.pathname === "/sport" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/sport"}> Sport</Link></li>
-                    <li> <Link className={`block ${location.pathname === "/business" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/business"}> Business</Link></li>
-                    <li> <Link className={`block ${location.pathname === "/culture" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/culture"}> Culture</Link></li>
-                    <li> <Link className={`block ${location.pathname === "/travel" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/travel"}> Travel</Link></li>
-                    <li> <Link className={`block ${location.pathname === "/earth" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/earth"}> Earth</Link></li>
+                    <li> <Link onClick={() => setResponsiveNavbar(!responsiveNavbar)} className={`block ${location.pathname === "/" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/"}> Home</Link></li>
+                    <li> <Link onClick={() => setResponsiveNavbar(!responsiveNavbar)} className={`block ${location.pathname === "/sport" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/sport"}> Sport</Link></li>
+                    <li> <Link onClick={() => setResponsiveNavbar(!responsiveNavbar)} className={`block ${location.pathname === "/business" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/business"}> Business</Link></li>
+                    <li> <Link onClick={() => setResponsiveNavbar(!responsiveNavbar)} className={`block ${location.pathname === "/culture" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/culture"}> Culture</Link></li>
+                    <li> <Link onClick={() => setResponsiveNavbar(!responsiveNavbar)} className={`block ${location.pathname === "/travel" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/travel"}> Travel</Link></li>
+                    <li> <Link onClick={() => setResponsiveNavbar(!responsiveNavbar)} className={`block ${location.pathname === "/earth" && "bg-zinc-100"} transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} to={"/earth"}> Earth</Link></li>
                 </ul>
             </div>
 
