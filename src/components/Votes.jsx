@@ -36,8 +36,8 @@ const Votes = ({ poll }) => {
     };
 
     return (
-        <div className="border p-5 myShadow rounded-md flex flex-col justify-between">
-            <h2 className="font-semibold text-lg leading-tight mb-5">{poll.question}</h2>
+        <div className="border p-5 myShadow rounded-md flex flex-col justify-between fadeIn">
+            <h2 className="font-semibold text-lg mb-5">{poll.question}</h2>
 
             {poll.options.map((option) => (
                 <div
