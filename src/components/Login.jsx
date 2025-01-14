@@ -3,10 +3,10 @@ import React from 'react'
 const Login = () => {
     return (
         <>
-            <section class="grid fastFadeIn text-center  items-center p-10">
-                <div className='border-2 py-10 border-black mx-auto max-w-[30rem] w-full rounded-md'>
+            <section class="grid fastFadeIn text-center  items-center md:p-10 p-4">
+                <div className='border-2 py-10 border-[#0000003f] mx-auto max-w-[35rem] w-full rounded-lg'>
                     <h3 class="text-3xl font-semibold mb-2">Sign In</h3>
-                    <p class="mb-10 text-gray-700">
+                    <p class="mb-10 text-gray-700 px-3">
                         Enter your email and password to sign in
                     </p>
                     <form action="#" class="mx-auto w-full px-5 text-left">
@@ -18,7 +18,7 @@ const Login = () => {
                                 id="email"
                                 type="email"
                                 placeholder="Enter Your Email"
-                                class="w-full border rounded-md border-black text-lg p-3 placeholder:text-[16px]"
+                                class="w-full border rounded-md border-zinc-300 text-lg p-3 placeholder:text-[16px]"
                             />
                         </div>
                         <div class="mb-6">
@@ -29,7 +29,7 @@ const Login = () => {
                                 id="password"
                                 type="password"
                                 placeholder="Enter Your Password"
-                                class="w-full border placeholder:pt-5 placeholder:block rounded-md border-black text-lg p-3 placeholder:text-[16px]"
+                                class="w-full border placeholder:pt-5 placeholder:block rounded-md border-zinc-300 text-lg p-3 placeholder:text-[16px]"
                             />
                         </div>
                         <button class="bg-black text-white text-lg py-3 rounded-md border-2 border-black font-medium tracking-wide transition-all duration-300 hover:bg-white hover:text-black w-full">
