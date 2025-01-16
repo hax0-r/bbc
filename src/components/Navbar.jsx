@@ -43,22 +43,27 @@ const TopNavbar = () => {
                     </div>
                 </div>
 
-                <div className=" flex justify-center items-center mb-4">
-                    <div className="border rounded-full flex justify-center overflow-hidden  items-center">
-                        <Link to={"/"} onClick={() => {
-                            setToggleNavbar(false)
-                            setNavTabs("home")
-                        }} className={`py-3 block px-5 pl-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${navTabs === "home" && "bg-zinc-50"} `}>Home</Link>
-                        <Link to={""} onClick={() => {
-                            setToggleNavbar(false)
-                            setNavTabs("news")
-                        }} className={`py-3 block px-5 pr-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${navTabs === "news" && "bg-zinc-50"}`}>News</Link>
-                        <Link to={"/servey"} onClick={() => {
-                            setToggleNavbar(false)
-                            setNavTabs("survey")
-                        }} className={`py-3 block px-5 pr-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${navTabs === "survey" && "bg-zinc-50"}`}>Survey</Link>
-                    </div>
-                </div>
+                {
+                    location.pathname !== "/login" && location.pathname !== "/register" && (
+                        <div className=" flex justify-center items-center mb-4">
+                            <div className="border rounded-full flex justify-center overflow-hidden  items-center">
+                                <Link to={"/"} onClick={() => {
+                                    setToggleNavbar(false)
+                                    setNavTabs("home")
+                                }} className={`py-3 block px-5 pl-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${navTabs === "home" && "bg-zinc-50"} `}>Home</Link>
+                                <Link to={""} onClick={() => {
+                                    setToggleNavbar(false)
+                                    setNavTabs("news")
+                                }} className={`py-3 block px-5 pr-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${navTabs === "news" && "bg-zinc-50"}`}>News</Link>
+                                <Link to={"/servey"} onClick={() => {
+                                    setToggleNavbar(false)
+                                    setNavTabs("survey")
+                                }} className={`py-3 block px-5 pr-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${navTabs === "survey" && "bg-zinc-50"}`}>Survey</Link>
+                            </div>
+                        </div>
+                    )
+                }
+
 
                 {
                     !toggleNavbar && (
