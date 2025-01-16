@@ -1,19 +1,21 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { HiMiniBars3 } from 'react-icons/hi2'
 import { IoIosSearch } from 'react-icons/io'
 import { IoClose } from 'react-icons/io5'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import logo from "../assets/logo.png"
+import { NavbarContext } from '../Context/Navbar'
 
 const TopNavbar = () => {
 
     const [toggleNavbar, setToggleNavbar] = useState(false)
     const [responsiveNavbar, setResponsiveNavbar] = useState(false)
 
+    const { navTabs, setNavTabs } = useContext(NavbarContext)
+
     const location = useLocation();
 
     const [innerWidth, setInnerWidth] = useState(window.innerWidth)
-
 
     return (
         <>
@@ -43,10 +45,21 @@ const TopNavbar = () => {
 
                 <div className=" flex justify-center items-center mb-4">
                     <div className="border rounded-full flex justify-center overflow-hidden  items-center">
-                        <Link to={"/"} onClick={() => setToggleNavbar(false)} className={`py-3 block px-5 pl-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${location.pathname === "/" && "bg-zinc-50"} `}>Home</Link>
-                        <Link to={"/servey"} onClick={() => setToggleNavbar(false)} className={`py-3 block px-5 pr-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${location.pathname === "/servey" && "bg-zinc-50"}`}>Survey</Link>
+                        <Link to={"/"} onClick={() => {
+                            setToggleNavbar(false)
+                            setNavTabs("home")
+                        }} className={`py-3 block px-5 pl-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${navTabs === "home" && "bg-zinc-50"} `}>Home</Link>
+                        <Link to={""} onClick={() => {
+                            setToggleNavbar(false)
+                            setNavTabs("news")
+                        }} className={`py-3 block px-5 pr-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${navTabs === "news" && "bg-zinc-50"}`}>News</Link>
+                        <Link to={"/servey"} onClick={() => {
+                            setToggleNavbar(false)
+                            setNavTabs("survey")
+                        }} className={`py-3 block px-5 pr-7 transition-all duration-500 font-medium hover:bg-zinc-50 ${navTabs === "survey" && "bg-zinc-50"}`}>Survey</Link>
                     </div>
                 </div>
+
                 {
                     !toggleNavbar && (
                         <div className="border-b md:block hidden fastFadeIn">
